@@ -1,0 +1,469 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poções e Robôs</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="pocaofeia.ico" type="image/x-icon">
+</head>
+<body id="body">
+    
+    <!--Não me orgulho desse código... só quero deixar isso claro-->
+
+    <h1 id="contexto">---CONTEXTO---</h1>
+
+    <div id="frasecontexto">
+        A história se passa em eras antigas, quando os reis e imperadores ainda
+        governavam a terra. Porém, nessas terras, nem tudo é tão
+        antigo quanto parece ser. Você é um mercador fabricante de poções que
+         está escrevendo a anos um livro de receitas.
+    </div>
+
+    <button id="botaocontexto" onclick="fadeContx();setTimeout(pergunta1, 1000);setTimeout
+    (removerFadeContx, 2000)">COMECE!</button>
+
+    <div id="fadecontexto"></div>
+
+    <div id="fadenormal"></div>
+
+    <!--As perguntas e os 2 botões de cada uma-->
+
+    <div id="conflito1"></div>
+    <button id="escolha1" onclick="fadeNormal();setTimeout(tropecar, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 1-->  
+    <button id="escolha2" onclick="fadeNormal();setTimeout(pergunta2, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    
+
+    <div id="conflito2"></div>
+    <button id="escolha3" onclick="fadeNormal();setTimeout(pergunta3, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 2-->
+    <button id="escolha4" onclick="fadeNormal();setTimeout(pergunta3, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    <div id="conflito3"></div>
+    <button id="escolha5" onclick="fadeNormal();setTimeout(pergunta4, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 3-->
+    <button id="escolha6" onclick="fadeNormal();setTimeout(pergunta4, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    <div id="conflito4"></div>
+    <button id="escolha7" onclick="fadeNormal();setTimeout(pergunta5, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 4-->
+    <button id="escolha8" onclick="fadeNormal();setTimeout(pergunta5, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    <div id="conflito5"></div>
+    <button id="escolha9" onclick="fadeNormal();setTimeout(pergunta6, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 5-->
+    <button id="escolha10" onclick="fadeNormal();setTimeout(pergunta6, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    <div id="conflito6"></div>
+    <button id="escolha11" onclick="fadeNormal();setTimeout(pergunta7, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 6-->
+    <button id="escolha12" onclick="fadeNormal();setTimeout(pergunta7, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    <div id="conflito7"></div>
+    <button id="escolha13" onclick="fadeNormal();setTimeout(pergunta8, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 7-->
+    <button id="escolha14" onclick="fadeNormal();setTimeout(pergunta8, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    <div id="conflito8"></div>
+    <button id="escolha15" onclick="fadeNormal();setTimeout(pergunta9, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 8-->
+    <button id="escolha16" onclick="fadeNormal();setTimeout(pergunta9, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    <div id="conflito9"></div>
+    <button id="escolha17" onclick="fadeNormal();setTimeout(pergunta10, 300);setTimeout
+    (removerFadeNormal, 600)"></button>  <!--Pergunta 9-->
+    <button id="escolha18" onclick="fadeNormal();setTimeout(pergunta10, 300);setTimeout
+    (removerFadeNormal, 600)"></button>
+
+    <div id="conflito10"></div>
+    <button id="escolha19"onclick="fadeContx();setTimeout(pergunta1, 1000);setTimeout
+    (removerFadeContx, 2000)" ></button>  <!--Pergunta 10-->
+    <button id="escolha20" onclick="fadeContx();setTimeout(pergunta1, 1000);setTimeout
+    (removerFadeContx, 2000)"></button>
+
+    <button id="tropeco1" onclick="fadeNormal();soltar1();setTimeout(removerFadeNormal, 600)"></button>
+    <button id="tropeco2" onclick="fadeNormal();soltar2();setTimeout(removerFadeNormal, 600)"></button>
+    <button id="tropeco3" onclick="fadeNormal();pergunta2correr();setTimeout(removerFadeNormal, 600)"></button>
+
+    <button id="continuar1" onclick="fadeNormal();pergunta2p2();setTimeout(removerFadeNormal, 600)">Continuar</button>
+
+    <script>
+        const botaocontx = document.getElementById("botaocontexto");
+            const contx = document.getElementById("contexto");
+            const frasecontx = document.getElementById("frasecontexto");
+
+            const escol1 = document.getElementById("escolha1");
+            const escol2 = document.getElementById("escolha2");
+            const confl1 = document.getElementById("conflito1");
+
+            const tropec1 = document.getElementById("tropeco1");
+            const tropec2 = document.getElementById("tropeco2");
+            const tropec3 = document.getElementById("tropeco3");
+
+            const escol3 = document.getElementById("escolha3");
+            const escol4 = document.getElementById("escolha4");
+            const confl2 = document.getElementById("conflito2");
+
+            const escol5 = document.getElementById("escolha5");
+            const escol6 = document.getElementById("escolha6");
+            const confl3 = document.getElementById("conflito3");
+
+            const escol7 = document.getElementById("escolha7");
+            const escol8 = document.getElementById("escolha8");
+            const confl4 = document.getElementById("conflito4");
+
+            const escol9 = document.getElementById("escolha9");
+            const escol10 = document.getElementById("escolha10");
+            const confl5 = document.getElementById("conflito5");
+
+            const escol11 = document.getElementById("escolha11");
+            const escol12 = document.getElementById("escolha12");
+            const confl6 = document.getElementById("conflito6");
+
+            const escol13 = document.getElementById("escolha13");
+            const escol14 = document.getElementById("escolha14");
+            const confl7 = document.getElementById("conflito7");
+
+            const escol15 = document.getElementById("escolha15");
+            const escol16 = document.getElementById("escolha16");
+            const confl8 = document.getElementById("conflito8");
+
+            const escol17 = document.getElementById("escolha17");
+            const escol18 = document.getElementById("escolha18");
+            const confl9 = document.getElementById("conflito9");
+
+            const escol19 = document.getElementById("escolha19");
+            const escol20 = document.getElementById("escolha20");
+            const confl10 = document.getElementById("conflito10");
+            
+
+            const fadecontx = document.getElementById("fadecontexto");
+            const fadenorm = document.getElementById("fadenormal");
+            const fadepisc = document.getElementById("piscar");
+
+            const contin1 = document.getElementById("continuar1")
+
+        function pergunta1() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+            frasecontx.style.display = 'none'
+            contx.style.display = 'none'
+            botaocontx.style.display = 'none'
+
+            confl1.style.display = "block";
+            confl1.style.color = 'var(--azul-claro)';
+            confl1.style.backgroundColor = '#0a43be6b';
+            confl1.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: um Heléboro-Azul, uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
+
+            escol1.style.display = "inline-block";
+            escol1.style.color = 'var(--azul-claro)'
+            escol1.style.borderColor = 'var(--azul-mais-escuro)'
+            escol1.style.backgroundColor = 'var(--azul-escuro)'
+            escol1.innerHTML = "Vou correndo até a luz"
+
+            escol2.style.display = "inline-block";
+            escol2.style.color = 'var(--azul-claro)'
+            escol2.style.borderColor = 'var(--azul-mais-escuro)'
+            escol2.style.backgroundColor = 'var(--azul-escuro)'
+            escol2.innerHTML = "Vou silenciosamente até a luz"
+        }
+
+        function pergunta2() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+            escol1.style.display = 'none'
+            escol2.style.display = 'none'
+            confl1.style.display = 'none'
+            escol3.style.display = 'none'
+            escol4.style.display = 'none'
+            tropec2.style.display = 'none'
+            tropec3.style.display = 'none'
+
+            contin1.style.display = 'block'
+
+            confl2.style.display = "block";
+            confl2.style.color = 'var(--azul-claro)';
+            confl2.style.backgroundColor = '#0a43be6b';
+            confl2.innerHTML = "Cautelosamente, e se escondendo atrás de uma árvore, você se aproxima da luz. Olhando para o local de origem dela, você vê um homem com um sobretudo e uma... mobília? Uma máquina? Você não consegue identificar o rosto do homem, nem o objeto, que aparenta ser feito de algum tipo de metal. Após 2 minutos observando a cena, algo que parece ser a porta da máquina abre, e de lá sai... uma mesa com rodas?! O quê?";
+
+
+        }
+
+        function pergunta2correr() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+            escol1.style.display = 'none'
+            escol2.style.display = 'none'
+            confl1.style.display = 'none'
+            escol3.style.display = 'none'
+            escol4.style.display = 'none'
+            tropec2.style.display = 'none'
+            tropec3.style.display = 'none'
+
+            contin1.style.display = 'block'
+
+            confl2.style.display = "block";
+            confl2.style.color = 'var(--azul-claro)';
+            confl2.style.backgroundColor = '#0a43be6b';
+            escol2.style.display = "inline-block";
+            confl2.innerHTML = "Após esse desastre, você se esconde atrás de uma árvore e se aproxima da luz. Olhando para o local de origem dela, você vê um homem com um sobretudo e uma... mobília? Uma máquina? Você não consegue identificar o rosto do homem, nem o objeto, que aparenta ser feito de algum tipo de metal. Após 2 minutos observando a cena, algo que parece ser a porta da máquina abre, e de lá sai... uma mesa com rodas?! O quê?";
+
+        }
+
+        function pergunta2p2() {
+
+            escol3.style.display = 'block'
+            escol4.style.display = 'block'
+
+            contin1.style.display = 'none'
+
+            escol3.style.display = "inline-block";
+            escol3.innerHTML = "Corro até a mesa"
+
+            escol4.style.display = "inline-block";
+            escol4.innerHTML = "Vou cuidadosamente até a mesa"
+
+            confl2.innerHTML = "No momento que a tal da mesa saiu daquele objeto, a chuva ficou muito mais forte, e o homem correu para longe, pegando uma bolsa e cravando algo no chão antes de ir. Agora, mais curioso do que antes, o quê você fará?"
+        }
+
+        function tropecar() {
+            escol1.style.display = 'none';
+            escol2.style.display = 'none';
+            tropec1.style.display = 'block'
+            tropec1.innerHTML = "Se soltar"
+
+            confl1.innerHTML = 'Por causa da sua pressa, você tropeçou num galho e prendeu o seu pé nele.';
+
+        }
+        function soltar1() {
+            tropec1.style.display = 'none'
+            tropec2.style.display = 'block'
+            confl1.innerHTML = "Você não se soltou.";
+            tropec2.innerHTML = "Soltar"
+        }
+        function soltar2() {
+            tropec2.style.display = 'none'
+            tropec3.style.display = 'block'
+            confl1.innerHTML = "Você ainda não se soltou."
+            tropec3.innerHTML = "Soltar!"
+        }
+
+        function pergunta3() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+
+            confl1.style.display = "block";
+            confl1.style.color = 'var(--azul-claro)';
+            confl1.style.backgroundColor = '#0a43be6b';
+            confl1.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: a (pfv mudar nome da flor), uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
+
+            escol1.style.display = "inline-block";
+            escol1.style.color = 'var(--azul-claro)'
+            escol1.style.borderColor = 'var(--azul-mais-escuro)'
+            escol1.style.backgroundColor = 'var(--azul-escuro)'
+            escol1.innerHTML = "Vou correndo até a luz"
+
+            escol2.style.display = "inline-block";
+            escol2.style.color = 'var(--azul-claro)'
+            escol2.style.borderColor = 'var(--azul-mais-escuro)'
+            escol2.style.backgroundColor = 'var(--azul-escuro)'
+            escol2.innerHTML = "Vou silenciosamente até a luz"
+        }
+
+        function pergunta4() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+
+            confl1.style.display = "block";
+            confl1.style.color = 'var(--azul-claro)';
+            confl1.style.backgroundColor = '#0a43be6b';
+            confl1.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: a (pfv mudar nome da flor), uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
+
+            escol1.style.display = "inline-block";
+            escol1.style.color = 'var(--azul-claro)'
+            escol1.style.borderColor = 'var(--azul-mais-escuro)'
+            escol1.style.backgroundColor = 'var(--azul-escuro)'
+            escol1.innerHTML = "Vou correndo até a luz"
+
+            escol2.style.display = "inline-block";
+            escol2.style.color = 'var(--azul-claro)'
+            escol2.style.borderColor = 'var(--azul-mais-escuro)'
+            escol2.style.backgroundColor = 'var(--azul-escuro)'
+            escol2.innerHTML = "Vou silenciosamente até a luz"
+        }
+
+        function pergunta5() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+
+            confl1.style.display = "block";
+            confl1.style.color = 'var(--azul-claro)';
+            confl1.style.backgroundColor = '#0a43be6b';
+            confl1.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: a (pfv mudar nome da flor), uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
+
+            escol1.style.display = "inline-block";
+            escol1.style.color = 'var(--azul-claro)'
+            escol1.style.borderColor = 'var(--azul-mais-escuro)'
+            escol1.style.backgroundColor = 'var(--azul-escuro)'
+            escol1.innerHTML = "Vou correndo até a luz"
+
+            escol2.style.display = "inline-block";
+            escol2.style.color = 'var(--azul-claro)'
+            escol2.style.borderColor = 'var(--azul-mais-escuro)'
+            escol2.style.backgroundColor = 'var(--azul-escuro)'
+            escol2.innerHTML = "Vou silenciosamente até a luz"
+        }
+
+        function pergunta6() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+
+            confl1.style.display = "block";
+            confl1.style.color = 'var(--azul-claro)';
+            confl1.style.backgroundColor = '#0a43be6b';
+            confl1.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: a (pfv mudar nome da flor), uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
+
+            escol1.style.display = "inline-block";
+            escol1.style.color = 'var(--azul-claro)'
+            escol1.style.borderColor = 'var(--azul-mais-escuro)'
+            escol1.style.backgroundColor = 'var(--azul-escuro)'
+            escol1.innerHTML = "Vou correndo até a luz"
+
+            escol2.style.display = "inline-block";
+            escol2.style.color = 'var(--azul-claro)'
+            escol2.style.borderColor = 'var(--azul-mais-escuro)'
+            escol2.style.backgroundColor = 'var(--azul-escuro)'
+            escol2.innerHTML = "Vou silenciosamente até a luz"
+        }
+
+        function pergunta7() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+
+            confl1.style.display = "block";
+            confl1.style.color = 'var(--azul-claro)';
+            confl1.style.backgroundColor = '#0a43be6b';
+            confl1.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: a (pfv mudar nome da flor), uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
+
+            escol1.style.display = "inline-block";
+            escol1.style.color = 'var(--azul-claro)'
+            escol1.style.borderColor = 'var(--azul-mais-escuro)'
+            escol1.style.backgroundColor = 'var(--azul-escuro)'
+            escol1.innerHTML = "Vou correndo até a luz"
+
+            escol2.style.display = "inline-block";
+            escol2.style.color = 'var(--azul-claro)'
+            escol2.style.borderColor = 'var(--azul-mais-escuro)'
+            escol2.style.backgroundColor = 'var(--azul-escuro)'
+            escol2.innerHTML = "Vou silenciosamente até a luz"
+        }
+
+        function pergunta8() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+
+            confl1.style.display = "block";
+            confl1.style.color = 'var(--azul-claro)';
+            confl1.style.backgroundColor = '#0a43be6b';
+            confl1.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: a (pfv mudar nome da flor), uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
+
+            escol1.style.display = "inline-block";
+            escol1.style.color = 'var(--azul-claro)'
+            escol1.style.borderColor = 'var(--azul-mais-escuro)'
+            escol1.style.backgroundColor = 'var(--azul-escuro)'
+            escol1.innerHTML = "Vou correndo até a luz"
+
+            escol2.style.display = "inline-block";
+            escol2.style.color = 'var(--azul-claro)'
+            escol2.style.borderColor = 'var(--azul-mais-escuro)'
+            escol2.style.backgroundColor = 'var(--azul-escuro)'
+            escol2.innerHTML = "Vou silenciosamente até a luz"
+        }
+
+        function pergunta9() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+
+            confl1.style.display = "block";
+            confl1.style.color = 'var(--azul-claro)';
+            confl1.style.backgroundColor = '#0a43be6b';
+            confl1.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: a (pfv mudar nome da flor), uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
+
+            escol1.style.display = "inline-block";
+            escol1.style.color = 'var(--azul-claro)'
+            escol1.style.borderColor = 'var(--azul-mais-escuro)'
+            escol1.style.backgroundColor = 'var(--azul-escuro)'
+            escol1.innerHTML = "Vou correndo até a luz"
+
+            escol2.style.display = "inline-block";
+            escol2.style.color = 'var(--azul-claro)'
+            escol2.style.borderColor = 'var(--azul-mais-escuro)'
+            escol2.style.backgroundColor = 'var(--azul-escuro)'
+            escol2.innerHTML = "Vou silenciosamente até a luz"
+        }
+
+        function pergunta10() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+
+            confl1.style.display = "block";
+            confl1.style.color = 'var(--azul-claro)';
+            confl1.style.backgroundColor = '#0a43be6b';
+            confl1.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: a (pfv mudar nome da flor), uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
+
+            escol1.style.display = "inline-block";
+            escol1.style.color = 'var(--azul-claro)'
+            escol1.style.borderColor = 'var(--azul-mais-escuro)'
+            escol1.style.backgroundColor = 'var(--azul-escuro)'
+            escol1.innerHTML = "Vou correndo até a luz"
+
+            escol2.style.display = "inline-block";
+            escol2.style.color = 'var(--azul-claro)'
+            escol2.style.borderColor = 'var(--azul-mais-escuro)'
+            escol2.style.backgroundColor = 'var(--azul-escuro)'
+            escol2.innerHTML = "Vou silenciosamente até a luz"
+        }
+
+        function creditos() {
+            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+
+            confl1.style.display = "block";
+            confl1.style.color = 'var(--azul-claro)';
+            confl1.style.backgroundColor = '#0a43be6b';
+            confl1.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: a (pfv mudar nome da flor), uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
+
+            escol1.style.display = "inline-block";
+            escol1.style.color = 'var(--azul-claro)'
+            escol1.style.borderColor = 'var(--azul-mais-escuro)'
+            escol1.style.backgroundColor = 'var(--azul-escuro)'
+            escol1.innerHTML = "Vou correndo até a luz"
+
+            escol2.style.display = "inline-block";
+            escol2.style.color = 'var(--azul-claro)'
+            escol2.style.borderColor = 'var(--azul-mais-escuro)'
+            escol2.style.backgroundColor = 'var(--azul-escuro)'
+            escol2.innerHTML = "Vou silenciosamente até a luz"
+        }
+
+        function removerFadeContx() {
+            fadecontx.style.display = 'none'
+        }
+
+        function fadeContx() {
+        fadecontx.style.display = 'block'
+        }
+
+        function fadeNormal() {
+            fadenorm.style.display = 'block'
+        }
+        function removerFadeNormal() {
+            fadenorm.style.display = 'none'
+        }
+        function fadePiscar() {
+            fadepisc.style.display = 'block'
+        }
+        function removerFadePiscar() {
+            fadepisc.style.display = 'none'
+        }
+        </script>
+    
+</body>
+</html>
