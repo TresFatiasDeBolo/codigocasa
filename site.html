@@ -8,6 +8,14 @@
 </head>
 <body id="body">
 
+
+    <!--Trabalho feito por:
+    Antony Berte: Programação, leves mudanças na história, icone da pagina
+    Bruno Henrique: História
+    Gabriel Timoteo: Imagens
+    -->
+
+
     <h1 id="contexto">---CONTEXTO---</h1>
 
     <div id="frasecontexto">
@@ -77,15 +85,15 @@
     (removerFadeNormal, 600)"></button>
 
     <div id="conflito9"></div>
-    <button id="escolha17" onclick="fadeNormal();setTimeout(pergunta10, 300);setTimeout
+    <button id="escolha17" onclick="fadeNormal();setTimeout(pergunta10saosim, 300);setTimeout
     (removerFadeNormal, 600)"></button>  <!--Pergunta 9-->
-    <button id="escolha18" onclick="fadeNormal();setTimeout(pergunta10, 300);setTimeout
+    <button id="escolha18" onclick="fadeNormal();setTimeout(pergunta10oqhouve, 300);setTimeout
     (removerFadeNormal, 600)"></button>
 
     <div id="conflito10"></div>
-    <button id="escolha19"onclick="fadeContx();setTimeout(pergunta1, 1000);setTimeout
-    (removerFadeContx, 2000)" ></button>  <!--Pergunta 10-->
-    <button id="escolha20" onclick="fadeContx();setTimeout(pergunta1, 1000);setTimeout
+    <button id="escolha19" onclick="fadeContx();setTimeout(pergunta10tchau, 1000);setTimeout
+(removerFadeContx, 2000)" ></button>  <!--Pergunta 10-->
+    <button id="escolha20" onclick="fadeContx();setTimeout(pergunta10obg, 1000);setTimeout
     (removerFadeContx, 2000)"></button>
 
     <button id="tropeco1" onclick="fadeNormal();soltar1();setTimeout(removerFadeNormal, 600)"></button>
@@ -103,7 +111,11 @@
     <button id="continuar8" onclick="fadeNormal();setTimeout(pergunta7p2, 300);setTimeout(removerFadeNormal, 600)">Continuar</button>
     <button id="continuar9" onclick="fadeNormal();setTimeout(pergunta8, 300);setTimeout(removerFadeNormal, 600)">Continuar</button>
     <button id="continuar10" onclick="fadeNormal();setTimeout(pergunta9, 300);setTimeout(removerFadeNormal, 600)">Continuar</button>
-    <button id="continuar11" onclick="fadeNormal();setTimeout(pergunta8, 300);setTimeout(removerFadeNormal, 600)">Continuar</button>
+    <button id="continuar11" onclick="fadeContx();setTimeout(pergunta9p2, 1000);setTimeout(removerFadeContx, 2000)">Continuar</button>
+    <button id="continuar12" onclick="fadeNormal();setTimeout(pergunta10p2, 300);setTimeout(removerFadeNormal, 600)">Continuar</button>
+    <button id="continuar13" onclick="fadeContx();setTimeout(creditos, 1000);setTimeout(removerFadeContx, 2000)">Créditos</button>
+
+    <button id="reiniciar" onclick="fadeContx();setTimeout(pergunta1, 1000);setTimeout(removerFadeContx, 2000)">Reiniciar?</button>
 
     <script>
         const botaocontx = document.getElementById("botaocontexto");
@@ -171,6 +183,10 @@
             const contin9 = document.getElementById("continuar9");
             const contin10 = document.getElementById("continuar10");
             const contin11 = document.getElementById("continuar11");
+            const contin12 = document.getElementById("continuar12");
+            const contin13 = document.getElementById("continuar13");
+
+            const reiniciar = document.getElementById("reiniciar")
 
         function pergunta1() {
             document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
@@ -179,8 +195,11 @@
             botaocontx.style.display = 'none'
             contin4.style.display = 'none'
             continpedra.style.display = 'none'
+            confl10.style.display = 'none'
+            reiniciar.style.display = 'none'
 
             confl1.style.display = "block";
+            confl1.style.cursor = 'default'
             confl1.style.color = 'var(--azul-claro)';
             confl1.style.backgroundColor = '#0a43be6b';
             confl1.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: um Heléboro-Azul, uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
@@ -211,6 +230,7 @@
             contin1.style.display = 'block'
 
             confl2.style.display = "block";
+            confl2.style.cursor = 'default'
             confl2.style.color = 'var(--azul-claro)';
             confl2.style.backgroundColor = '#0a43be6b';
             confl2.innerHTML = "Cautelosamente, e se escondendo atrás de uma árvore, você se aproxima da luz. Olhando para o local de origem dela, você vê um homem com um sobretudo e uma... máquina? Você não consegue identificar o rosto do homem, nem o objeto, que aparenta ser feito de algum tipo de metal. Após 2 minutos observando a cena, algo que parece ser a porta da máquina abre, e de lá sai... uma mesa com rodas?! O quê?";
@@ -288,6 +308,7 @@
             escol4.style.display = 'none'
 
             confl3.style.display = 'block'
+            confl3.style.cursor = 'default'
             confl3.style.backgroundColor = '#0a43be6b'
             confl3.style.color = 'var(--azul-claro)'
             confl3.innerHTML = "Ao tentar correr até a mesa, você tropeça numa pedra e cai de cara no chão."
@@ -301,9 +322,10 @@
             escol4.style.display = 'none'
 
             confl3.style.display = 'block'
+            confl3.style.cursor = 'default'
             confl3.style.backgroundColor = '#0a43be6b'
             confl3.style.color = 'var(--azul-claro)'
-            confl3.innerHTML = "Você vai, lentamente, até a mesa. Quando você se aproxima dela, você ouve uma voz estranha vindo dela dizendo \"TEMPO DE CARREGAMENTO 3 HORAS\". Levemente assustado, você decide pegar ela e correr de volta até sua casa."
+            confl3.innerHTML = "Você vai, lentamente, até a mesa. Quando você se aproxima dela, você ouve uma voz estranha vindo dela dizendo algo num idioma que você não entende. Levemente assustado, você decide pegar ela e correr de volta até sua casa."
             contin2.style.display = 'block'
         }
         function pergunta3normal() {
@@ -314,6 +336,7 @@
 
             confl3.style.display = 'block'
             confl3.style.backgroundColor = '#0a43be6b'
+            confl3.style.cursor = 'default'
             confl3.style.color = 'var(--azul-claro)'
             confl3.innerHTML = "Você vai, com o rosto mais sujo do que antes, até a mesa. Quando você se aproxima dela, você ouve uma voz estranha vindo dela dizendo \"TEMPO DE CARREGAMENTO 3 HORAS\". Levemente assustado, você decide pegar ela e correr de volta até sua casa."
             continpedra.style.display = 'none'
@@ -356,6 +379,7 @@
             confl3.style.display = 'none'
 
             contin3.style.display = 'block'
+            confl4.style.cursor = 'default'
             confl4.style.display = 'block'
 
             confl4.style.color = 'var(--azul-claro)'
@@ -371,6 +395,7 @@
             confl3.style.display = 'none'
 
             contin3.style.display = 'block'
+            confl4.style.cursor = 'default'
             confl4.style.display = 'block'
 
             confl4.style.color = 'var(--azul-claro)'
@@ -407,6 +432,7 @@
             contin4.style.display = 'block'
 
             confl5.style.display = 'block'
+            confl5.style.cursor = 'default'
             confl5.style.color = 'var(--azul-claro)'
             confl5.innerHTML = "\"Nós também ouvimos. Imaginamos que ele tenha algo a ver com aquele estrondo. Enfim, obrigado.\" Ele diz antes de sair. Você fecha a porta, e lembra que já é hora de abrir sua loja, então você decide mexer no objeto estranho depois."
         }
@@ -465,7 +491,7 @@
 
             contin6.style.display = 'block'
 
-            confl5.innerHTML = "\"Oi!\", você grita. O homem se vira e diz: \"Hã? Quem é você?\" num sotaque estranho. \"Eu te vi ontem, aqui na floresta\", você responde."
+            confl5.innerHTML = "\"Oi!\", você grita. O homem se vira e diz: \"Hã? Quem é você?\" num sotaque estranho. \"Eu te vi ontem aqui na floresta enquanto eu pegava flores\", você responde."
         }
 
         function pergunta6() {
@@ -474,9 +500,10 @@
             confl5.style.display = 'none'
 
             confl6.style.display = "block";
+            confl6.style.cursor = 'default'
             confl6.style.color = 'var(--azul-claro)';
             confl6.style.backgroundColor = '#0a43be6b';
-            confl6.innerHTML = "\"Espero que você não esteja vindo atrás de mim...\", ele responde. \"Já basta os cavaleiros. Eu queria permissão para falar com o rei, mas eles não me deixaram, e pelo visto não foram muito com a minha cara, também. O quê te traz até mim?\". Você responde:"
+            confl6.innerHTML = "\"Ah, você era aquele homem atrás da árvore.\", ele responde. \"Você não tá atrás de mim, né?\" Você responde:"
 
             escol11.style.display = "inline-block";
             escol11.style.color = 'var(--azul-claro)'
@@ -489,7 +516,7 @@
             escol12.style.color = 'var(--azul-claro)'
             escol12.style.borderColor = 'var(--azul-mais-escuro)'
             escol12.style.backgroundColor = 'var(--azul-escuro)'
-            escol12.innerHTML = "\"Acho que eu tenho algo que é seu...\""
+            escol12.innerHTML = "\"Ei, acho que eu tenho algo que é seu...\""
         }
         function pergunta6flor() {
             escol11.style.display = 'none'
@@ -527,9 +554,10 @@
             escol14.innerHTML = "Espero eles saírem de lá"
 
             confl7.style.display = 'block'
+            confl7.style.cursor = 'default'
             confl7.style.color = 'var(--azul-claro)'
             confl7.style.backgroundColor = '#0a43be6b';
-            confl7.innerHTML = "No caminho de volta, logo antes de sair da floresta, você vê 3 cavaleiros andando na rua da sua casa. Se eles te vissem na floresta nesse horário, com certeza iriam suspeitar de algo. O quê você fará?"
+            confl7.innerHTML = "No caminho de volta, logo antes de sair da floresta, você vê 3 cavaleiros andando na rua da sua casa. Se eles te vissem na floresta nesse horário, com certeza iriam suspeitar de você. O quê você fará?"
         }
         function pergunta7ajuda() {
             document.getElementById("body").style.backgroundImage = "url(florestachuva.jpg)"
@@ -581,6 +609,7 @@
             escol16.innerHTML = "\"Heléboro-Azul.\""
 
             confl8.style.display = 'block'
+            confl8.style.cursor = 'default'
             confl8.style.color = 'var(--azul-claro)'
             confl8.style.backgroundColor = '#0a43be6b';
             confl8.innerHTML = "Na floresta, agora com a mesa, o homem diz: \"Ei, qual é o nome daquela flor que você procurava, mesmo? Acho que eu posso te ajudar a achar ela...\""
@@ -603,48 +632,121 @@
         }
 
         function pergunta9() {
+            contin10.style.display = 'none'
+            confl8.style.display = 'none'
+
+            contin11.style.display = 'block'
+
+            confl9.style.display = 'block'
+            confl9.style.cursor = 'default'
+            confl9.style.color = 'var(--azul-claro)'
+            confl9.style.backgroundColor = '#0a43be6b';
+            confl9.innerHTML = "Ele vai até a mesa e interage com ela por alguns segundos, uma voz ecoa dela dizendo algo num idioma que você não entende, mas soa similar ao idioma da última vez. Após isso, ele aperta mais um botão, e logo começa a sair uma fumaça da mesa, tampando-a."
         }
 
-        function pergunta10() {
-            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+        function pergunta9p2() {
+            contin11.style.display = 'none'
 
-            confl1.style.display = "block";
-            confl1.style.color = 'var(--azul-claro)';
-            confl1.style.backgroundColor = '#0a43be6b';
-            confl1.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: a (pfv mudar nome da flor), uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
+            escol17.style.display = "inline-block";
+            escol17.style.color = 'var(--azul-claro)'
+            escol17.style.borderColor = 'var(--azul-mais-escuro)'
+            escol17.style.backgroundColor = 'var(--azul-escuro)'
+            escol17.innerHTML = "Sim, são essas!"
 
-            escol1.style.display = "inline-block";
-            escol1.style.color = 'var(--azul-claro)'
-            escol1.style.borderColor = 'var(--azul-mais-escuro)'
-            escol1.style.backgroundColor = 'var(--azul-escuro)'
-            escol1.innerHTML = "Vou correndo até a luz"
+            escol18.style.display = "inline-block";
+            escol18.style.color = 'var(--azul-claro)'
+            escol18.style.borderColor = 'var(--azul-mais-escuro)'
+            escol18.style.backgroundColor = 'var(--azul-escuro)'
+            escol18.innerHTML = "C-Como você fez isso?"
 
-            escol2.style.display = "inline-block";
-            escol2.style.color = 'var(--azul-claro)'
-            escol2.style.borderColor = 'var(--azul-mais-escuro)'
-            escol2.style.backgroundColor = 'var(--azul-escuro)'
-            escol2.innerHTML = "Vou silenciosamente até a luz"
+            confl9.innerHTML = "Quando a fumaça se dissipa, você vê três heléboros-azuis em cima da mesa, sem fazer ideia de como eles apareceram ali. \"São essas as flores?\", ele pergunta."
+        }
+
+        function pergunta10saosim() {
+            confl9.style.display = 'none'
+            escol17.style.display = 'none'
+            escol18.style.display = 'none'
+
+            contin12.style.display = 'block'
+
+            confl10.style.display = 'block'
+            confl10.style.cursor = 'default'
+            confl10.style.color = 'var(--azul-claro)'
+            confl10.style.backgroundColor = '#0a43be6b';
+            confl10.innerHTML = "\"Que bom, então. Significa que a minha máquina está funcionando corretamente, até mesmo nessa chuva. Pode ficar com as flores.\" Você pega as flores, ainda contemplando o quê você acabou de ver."
+        }
+
+        function pergunta10oqhouve() {
+            confl9.style.display = 'none'
+            escol17.style.display = 'none'
+            escol18.style.display = 'none'
+
+            contin12.style.display = 'block'
+
+            confl10.style.display = 'block'
+            confl10.style.cursor = 'default'
+            confl10.style.color = 'var(--azul-claro)'
+            confl10.style.backgroundColor = '#0a43be6b';
+            confl10.innerHTML = "\"Eu... é... eu não acho que eu conseguiria te explicar muito bem, mas eu recriei a flor usando a minha... mesa.\" Você ainda permanece confuso."
+        }
+        function pergunta10p2() {
+            contin12.style.display = 'none'
+
+            escol19.style.display = "inline-block";
+            escol19.style.color = 'var(--azul-claro)'
+            escol19.style.borderColor = 'var(--azul-mais-escuro)'
+            escol19.style.backgroundColor = 'var(--azul-escuro)'
+            escol19.innerHTML = "Me despeço e volto para casa"
+
+            escol20.style.display = "inline-block";
+            escol20.style.color = 'var(--azul-claro)'
+            escol20.style.borderColor = 'var(--azul-mais-escuro)'
+            escol20.style.backgroundColor = 'var(--azul-escuro)'
+            escol20.innerHTML = "Agradeço pelas flores e volto para casa"
+
+            confl10.innerHTML = "O homem desconhecido diz que ele deveria ir logo, pois já fez o que precisava fazer, e você ainda precisa dormir hoje."
+        }
+        function pergunta10obg() {
+            document.getElementById("body").style.backgroundImage = 'url(lojamedievalnoite.jpg)'
+
+            escol19.style.display = 'none'
+            escol20.style.display = 'none'
+
+            contin13.style.display = 'block'
+
+            confl10.style.display = 'block'
+            confl10.style.color = 'var(--azul-claro)'
+            confl10.style.backgroundColor = '#0a43be6b';
+            confl10.innerHTML = "\"Não foi nada\", ele diz antes de vocês dois partirem caminhos. Ao chegar na sua casa, você ouve novamente o estouro que havia ouvido nas últimas duas vezes. Por sorte, você ainda conseguiu dormir aquela noite."
+        }
+        function pergunta10tchau() {
+            document.getElementById("body").style.backgroundImage = 'url(lojamedievalnoite.jpg)'
+
+            escol19.style.display = 'none'
+            escol20.style.display = 'none'
+
+            contin13.style.display = 'block'
+
+            confl10.style.display = 'block'
+            confl10.style.color = 'var(--azul-claro)'
+            confl10.style.backgroundColor = '#0a43be6b';
+            confl10.innerHTML = "Ao chegar na sua casa, você ouve novamente o estouro que havia ouvido nas últimas duas vezes. Por sorte, você ainda conseguiu dormir aquela noite."
         }
 
         function creditos() {
-            document.getElementById("body").style.backgroundImage = 'url(florestachuva.jpg)'
+            document.getElementById("body").style.backgroundImage = 'url(vilaescura.jpg)'
 
-            confl1.style.display = "block";
-            confl1.style.color = 'var(--azul-claro)';
-            confl1.style.backgroundColor = '#0a43be6b';
-            confl1.innerHTML = "Numa uma noite chuvosa, com nada mais que uma tocha para te iluminar, você anda pela floresta buscando uma flor que você precisa para uma poção: a (pfv mudar nome da flor), uma flor que só floresce durante a chuva. Com a chuva cobrindo a sua visão e sua tocha se esforçando para aguentá-la, você de repente vê uma forte luz azul surgir na sua frente, seguida de um barulho estrondoso. O quê você fará?";
+            escol19.style.display = 'none'
+            escol20.style.display = 'none'
 
-            escol1.style.display = "inline-block";
-            escol1.style.color = 'var(--azul-claro)'
-            escol1.style.borderColor = 'var(--azul-mais-escuro)'
-            escol1.style.backgroundColor = 'var(--azul-escuro)'
-            escol1.innerHTML = "Vou correndo até a luz"
+            contin13.style.display = 'none'
 
-            escol2.style.display = "inline-block";
-            escol2.style.color = 'var(--azul-claro)'
-            escol2.style.borderColor = 'var(--azul-mais-escuro)'
-            escol2.style.backgroundColor = 'var(--azul-escuro)'
-            escol2.innerHTML = "Vou silenciosamente até a luz"
+            reiniciar.style.display = 'block'
+
+            confl10.style.display = 'block'
+            confl10.style.color = 'var(--azul-claro)'
+            confl10.style.backgroundColor = '#0a43be6b';
+            confl10.innerHTML = "Nos dias seguintes, você termina as poções que estava fazendo com o heléboro-azul e ouve as pessoas de sua vila falando sobre o acontecimento das luzes azuis. Naturalmente, diversas explicações diferentes para aquilo ter acontecido surgem, mas nenhuma delas pode ser considerada verídica. Até mesmo você não consegue encontrar uma explicação para a situação. Você prefere não falar sobre para as outras pessoas, e continua sua vida normalmente, ainda se perguntando quem era aquele homem."
         }
 
         function removerFadeContx() {

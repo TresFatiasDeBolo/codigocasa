@@ -158,6 +158,7 @@
     background-color: var(--marrom-escuro);
     color: var(--marrom-claro);
     border-radius: 1px;
+    border-color:  var(--azul-escuro);
     transition-duration: 0.8s;
     margin-left: 22%;
     vertical-align: middle;
@@ -169,6 +170,7 @@
     width: 330px;
     height: 80px;
     font-size: 30px;
+    border-color:  var(--azul-escuro);
     display: none;
     background-color: var(--marrom-escuro);
     color: var(--marrom-claro);
@@ -205,6 +207,7 @@
    display: none;
    text-align: center;
    width: 330px;
+   border-color:  var(--azul-escuro);
    height: 80px;
    font-size: 30px;
    display: none;
@@ -224,6 +227,7 @@
    font-size: 30px;
    display: none;
    background-color: var(--azul-escuro);
+   border-color:  var(--azul-escuro);
    color: var(--azul-claro);
    border-radius: 1px;
    transition-duration: 0.8s;
@@ -255,6 +259,7 @@
 #escolha5 {
    display: none;
    text-align: center;
+   border-color:  var(--azul-escuro);
    width: 330px;
    height: 80px;
    font-size: 30px;
@@ -270,6 +275,7 @@
 #escolha6 {
    display: none;
    text-align: center;
+   border-color:  var(--azul-escuro);
    width: 330px;
    height: 80px;
    font-size: 30px;
@@ -306,6 +312,7 @@
 #escolha7 {
    display: none;
    text-align: center;
+   border-color:  var(--azul-escuro);
    width: 330px;
    height: 80px;
    font-size: 30px;
@@ -320,6 +327,7 @@
 
 #escolha8 {
    display: none;
+   border-color:  var(--azul-escuro);
    text-align: center;
    width: 330px;
    height: 80px;
@@ -360,6 +368,7 @@
    width: 330px;
    height: 80px;
    font-size: 30px;
+   border-color:  var(--azul-escuro);
    display: none;
    background-color: var(--azul-escuro);
    color: var(--azul-claro);
@@ -373,6 +382,7 @@
    display: none;
    text-align: center;
    width: 330px;
+   border-color:  var(--azul-escuro);
    height: 80px;
    font-size: 30px;
    display: none;
@@ -410,6 +420,7 @@
    text-align: center;
    width: 330px;
    height: 80px;
+   border-color:  var(--azul-escuro);
    font-size: 30px;
    display: none;
    background-color: var(--azul-escuro);
@@ -426,6 +437,7 @@
    width: 330px;
    height: 80px;
    font-size: 30px;
+   border-color:  var(--azul-escuro);
    display: none;
    background-color: var(--azul-escuro);
    color: var(--azul-claro);
@@ -461,6 +473,7 @@
    text-align: center;
    width: 330px;
    height: 80px;
+   border-color:  var(--azul-escuro);
    font-size: 30px;
    display: none;
    background-color: var(--azul-escuro);
@@ -477,6 +490,7 @@
    width: 330px;
    height: 80px;
    font-size: 30px;
+   border-color:  var(--azul-escuro);
    display: none;
    background-color: var(--azul-escuro);
    color: var(--azul-claro);
@@ -512,6 +526,7 @@
    text-align: center;
    width: 330px;
    height: 80px;
+   border-color:  var(--azul-escuro);
    font-size: 30px;
    display: none;
    background-color: var(--azul-escuro);
@@ -527,6 +542,7 @@
    text-align: center;
    width: 330px;
    height: 80px;
+   border-color:  var(--azul-escuro);
    font-size: 30px;
    display: none;
    background-color: var(--azul-escuro);
@@ -565,6 +581,7 @@
    height: 80px;
    font-size: 30px;
    display: none;
+   border-color:  var(--azul-escuro);
    background-color: var(--azul-escuro);
    color: var(--azul-claro);
    border-radius: 1px;
@@ -580,6 +597,7 @@
    height: 80px;
    font-size: 30px;
    display: none;
+   border-color:  var(--azul-escuro);
    background-color: var(--azul-escuro);
    color: var(--azul-claro);
    border-radius: 1px;
@@ -615,6 +633,7 @@
    width: 330px;
    height: 80px;
    font-size: 30px;
+   border-color:  var(--azul-escuro);
    display: none;
    background-color: var(--azul-escuro);
    color: var(--azul-claro);
@@ -630,6 +649,7 @@
    width: 330px;
    height: 80px;
    font-size: 30px;
+   border-color:  var(--azul-escuro);
    display: none;
    background-color: var(--azul-escuro);
    color: var(--azul-claro);
@@ -906,6 +926,57 @@
 }
 
 #continuar11 {
+   text-align: center;
+   width: 300px;
+   height: 60px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#continuar12 {
+   text-align: center;
+   width: 300px;
+   height: 60px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#continuar13 {
+   text-align: center;
+   width: 300px;
+   height: 60px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#reiniciar {
    text-align: center;
    width: 300px;
    height: 60px;
