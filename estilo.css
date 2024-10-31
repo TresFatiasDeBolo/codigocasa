@@ -734,3 +734,191 @@
     display: none;
     cursor: pointer;
 }
+
+#continuar2 {
+   text-align: center;
+    width: 300px;
+    height: 60px;
+    font-size: 30px;
+    margin: auto;
+    display: block;
+    background-color: var(--azul-escuro);
+    color: var(--azul-claro);
+    transition-duration: 0.8s;
+    border-radius: 1px;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    display: none;
+    cursor: pointer;
+}
+
+#continuar3 {
+   text-align: center;
+    width: 300px;
+    height: 60px;
+    font-size: 30px;
+    margin: auto;
+    display: block;
+    background-color: var(--azul-escuro);
+    color: var(--azul-claro);
+    transition-duration: 0.8s;
+    border-radius: 1px;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    display: none;
+    cursor: pointer;
+}
+
+#continuar4 {
+   text-align: center;
+    width: 300px;
+    height: 60px;
+    font-size: 30px;
+    margin: auto;
+    display: block;
+    background-color: var(--azul-escuro);
+    color: var(--azul-claro);
+    transition-duration: 0.8s;
+    border-radius: 1px;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    display: none;
+    cursor: pointer;
+}
+
+#continuarpedra {
+   text-align: center;
+    width: 300px;
+    height: 60px;
+    font-size: 30px;
+    margin: auto;
+    display: block;
+    background-color: var(--azul-escuro);
+    color: var(--azul-claro);
+    transition-duration: 0.8s;
+    border-radius: 1px;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    display: none;
+    cursor: pointer;
+}
+
+#continuar5 {
+   text-align: center;
+   width: 300px;
+   height: 60px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#continuar6 {
+   text-align: center;
+   width: 300px;
+   height: 60px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#continuar7 {
+   text-align: center;
+   width: 300px;
+   height: 60px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#continuar8 {
+   text-align: center;
+   width: 300px;
+   height: 60px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#continuar9 {
+   text-align: center;
+   width: 300px;
+   height: 60px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#continuar10 {
+   text-align: center;
+   width: 300px;
+   height: 60px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
+#continuar11 {
+   text-align: center;
+   width: 300px;
+   height: 60px;
+   font-size: 30px;
+   margin: auto;
+   display: block;
+   background-color: var(--azul-escuro);
+   color: var(--azul-claro);
+   transition-duration: 0.8s;
+   border-radius: 1px;
+   animation-name: fade-in;
+   animation-duration: 2s;
+   display: none;
+   cursor: pointer;
+}
+
